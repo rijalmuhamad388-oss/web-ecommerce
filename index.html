@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LUXE — Premium Lifestyle Brand</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="stylee.css" />
+  </head>
+  <body>
+    <div id="loader">
+      <div class="ld-logo"><span>LUXE</span></div>
+      <p class="ld-tag">Premium Lifestyle Collection</p>
+      <div class="ld-track"><div class="ld-bar" id="ldBar"></div></div>
+    </div>
+    <div class="mob-menu" id="mobMenu">
+      <a href="#products" onclick="closeMob()">Shop</a>
+      <a href="#cats" onclick="closeMob()">Categories</a>
+      <a href="#about" onclick="closeMob()">About</a>
+      <a href="#bs" onclick="closeMob()">Best Sellers</a>
+      <a href="#testi" onclick="closeMob()">Reviews</a>
+      <a href="#contact" onclick="closeMob()">Contact</a>
+    </div>
+    <nav id="nav">
+      <a href="#" class="nav-logo">LUXE</a>
+      <ul class="nav-links">
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#cats">Categories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#bs">Best Sellers</a></li>
+        <li><a href="#testi">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-acts">
+        <button class="nav-icon"><i class="fas fa-search"></i></button>
+        <button class="nav-icon"><i class="fas fa-user"></i></button>
+        <button class="nav-icon" id="cartBtn">
+          <i class="fas fa-shopping-bag"></i
+          ><span class="cb" id="cBadge">0</span>
+        </button>
+        <button class="nav-cta">Sign In</button>
+        <button class="hamburger" id="ham" onclick="toggleMob()">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <section id="hero">
+      <div class="hero-grid-bg"></div>
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-badge">New Collection 2026</div>
+        <h1 class="hero-title">
+          Redefine Your<br /><span class="grad-txt">Luxury Style</span
+          ><br />Statement
+        </h1>
+        <p class="hero-desc">
+          Discover our curated collection of premium lifestyle products. Crafted
+          for those who appreciate the extraordinary in everyday luxury.
+        </p>
+        <div class="hero-btns">
+          <a href="#products" class="btn-p"
+            ><i class="fas fa-bag-shopping"></i> Shop Collection</a
+          >
+          <a href="#about" class="btn-s"
+            ><i class="fas fa-play-circle"></i> Our Story</a
+          >
+        </div>
+        <div class="hero-stats">
+          <div class="h-stat">
+            <h3>50K+</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="h-stat">
+            <h3>200+</h3>
+            <p>Products</p>
+          </div>
+          <div class="h-stat">
+            <h3>4.9★</h3>
+            <p>Rating</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-img-side">
+        <img
+          src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=900&auto=format&fit=crop"
+          alt="Hero"
+        />
+        <div class="h-float hf1">
+          <div class="fl-lbl">Best Seller</div>
+          <div class="fl-val">Premium Jacket</div>
+          <div class="fl-stars">★★★★★</div>
+        </div>
+        <div class="h-float hf2">
+          <div class="fl-lbl">Flash Deal</div>
+          <div class="fl-val">Up to 40% OFF</div>
+        </div>
+      </div>
+    </section>
+    <section id="products">
+      <div class="sec-hdr">
+        <div>
+          <span class="sec-lbl">Featured Collection</span>
+          <h2 class="sec-ttl">Handpicked for You</h2>
+          <p class="sec-desc">
+            Premium pieces curated by our style experts for the modern
+            connoisseur.
+          </p>
+        </div>
+        <a href="#" class="view-all"
+          >View All <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+      <div class="prod-grid" id="prodGrid"></div>
+    </section>
+    <section id="cats">
+      <div class="sec-hdr">
+        <div>
+          <span class="sec-lbl" style="color: #93c5fd">Shop by Category</span>
+          <h2 class="sec-ttl" style="color: #fff">Explore Our World</h2>
+          <p class="sec-desc" style="color: rgba(255, 255, 255, 0.45)">
+            Curated categories for every style preference.
+          </p>
+        </div>
+        <a href="#" class="view-all" style="color: #60a5fa"
+          >All Categories <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+      <div class="cat-grid">
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">👔</span>
+          <div class="cat-name">Fashion</div>
+          <div class="cat-cnt">142 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">💍</span>
+          <div class="cat-name">Jewelry</div>
+          <div class="cat-cnt">89 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">👜</span>
+          <div class="cat-name">Bags</div>
+          <div class="cat-cnt">64 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">⌚</span>
+          <div class="cat-name">Watches</div>
+          <div class="cat-cnt">37 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">👟</span>
+          <div class="cat-name">Footwear</div>
+          <div class="cat-cnt">116 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">🕶️</span>
+          <div class="cat-name">Accessories</div>
+          <div class="cat-cnt">203 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">✨</span>
+          <div class="cat-name">Beauty</div>
+          <div class="cat-cnt">78 Products</div></a
+        >
+        <a href="#" class="cat-card"
+          ><span class="cat-icon">🏠</span>
+          <div class="cat-name">Home Decor</div>
+          <div class="cat-cnt">95 Products</div></a
+        >
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-grid">
+        <div class="ab-imgs" data-aos="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&auto=format&fit=crop"
+            alt="LUXE Store"
+            class="ab-main"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&auto=format&fit=crop"
+            alt="Details"
+            class="ab-accent"
+          />
+          <div class="ab-badge">
+            <h3>12</h3>
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <span class="sec-lbl">Our Story</span>
+          <h2 class="sec-ttl">Crafting Luxury Experiences Since 2012</h2>
+          <p class="sec-desc">
+            LUXE was born from a passion for extraordinary craftsmanship and
+            timeless design. We believe luxury isn't just about price — it's
+            about the feeling of wearing something truly exceptional.
+          </p>
+          <ul class="ab-list">
+            <li>
+              <i class="fas fa-check-circle"></i> Curated from 50+ premium
+              international brands worldwide
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Each product passes rigorous
+              quality assurance standards
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Sustainable and ethically
+              sourced collections
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> Free worldwide shipping on
+              orders above $200
+            </li>
+            <li>
+              <i class="fas fa-check-circle"></i> 30-day hassle-free returns and
+              exchanges
+            </li>
+          </ul>
+          <a
+            href="#"
+            class="btn-p"
+            style="display: inline-flex; margin-top: 0.75rem"
+            ><i class="fas fa-info-circle"></i> Learn More</a
+          >
+          <div class="ab-metrics">
+            <div class="ab-metric">
+              <h3>50K+</h3>
+              <p>Satisfied Customers</p>
+            </div>
+            <div class="ab-metric">
+              <h3>200+</h3>
+              <p>Premium Products</p>
+            </div>
+            <div class="ab-metric">
+              <h3>48</h3>
+              <p>Countries Served</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bs">
+      <div class="sec-hdr">
+        <div>
+          <span class="sec-lbl">Top Picks</span>
+          <h2 class="sec-ttl">Best Sellers This Week</h2>
+          <p class="sec-desc">
+            Our most-loved pieces, chosen by our community of style enthusiasts.
+          </p>
+        </div>
+        <a href="#" class="view-all"
+          >View All <i class="fas fa-arrow-right"></i
+        ></a>
+      </div>
+      <div class="swiper bs-swiper">
+        <div class="swiper-wrapper" id="bsWrap"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+    <section id="promo">
+      <div class="promo-bg"></div>
+      <div class="promo-wrap">
+        <div data-aos="fade-right">
+          <div class="promo-lbl"><i class="fas fa-bolt"></i> Flash Sale</div>
+          <h2 class="promo-ttl">
+            Up to <span>40% OFF</span><br />Premium Collection
+          </h2>
+          <p class="promo-desc">
+            Don't miss our biggest sale of the season. Limited stock available —
+            grab yours before it's gone.
+          </p>
+          <div class="countdown">
+            <div class="cd-item">
+              <span class="cd-num" id="cDays">02</span
+              ><span class="cd-lbl">Days</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cHrs">14</span
+              ><span class="cd-lbl">Hours</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cMin">37</span
+              ><span class="cd-lbl">Mins</span>
+            </div>
+            <div class="cd-item">
+              <span class="cd-num" id="cSec">22</span
+              ><span class="cd-lbl">Secs</span>
+            </div>
+          </div>
+          <a href="#products" class="btn-p"
+            ><i class="fas fa-fire"></i> Shop Flash Sale</a
+          >
+        </div>
+        <div class="promo-prods" data-aos="fade-left">
+          <div class="pp-card">
+            <img
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&auto=format&fit=crop"
+              class="pp-img"
+              alt="Watch"
+            />
+            <div class="pp-info">
+              <div class="pp-name">Meridian Watch</div>
+              <div class="pp-prices">
+                <span class="pp-new">$189</span><span class="pp-old">$315</span>
+              </div>
+            </div>
+            <div class="pp-disc">-40%</div>
+          </div>
+          <div class="pp-card">
+            <img
+              src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&auto=format&fit=crop"
+              class="pp-img"
+              alt="Bag"
+            />
+            <div class="pp-info">
+              <div class="pp-name">Milano Tote Bag</div>
+              <div class="pp-prices">
+                <span class="pp-new">$142</span><span class="pp-old">$237</span>
+              </div>
+            </div>
+            <div class="pp-disc">-40%</div>
+          </div>
+          <div class="pp-card">
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&auto=format&fit=crop"
+              class="pp-img"
+              alt="Shoes"
+            />
+            <div class="pp-info">
+              <div class="pp-name">Arc Runner Pro</div>
+              <div class="pp-prices">
+                <span class="pp-new">$98</span><span class="pp-old">$163</span>
+              </div>
+            </div>
+            <div class="pp-disc">-40%</div>
+          </div>
+          <div class="pp-card">
+            <img
+              src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&auto=format&fit=crop"
+              class="pp-img"
+              alt="Perfume"
+            />
+            <div class="pp-info">
+              <div class="pp-name">Noir Essence Parfum</div>
+              <div class="pp-prices">
+                <span class="pp-new">$74</span><span class="pp-old">$123</span>
+              </div>
+            </div>
+            <div class="pp-disc">-40%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testi">
+      <div class="sec-hdr">
+        <div>
+          <span class="sec-lbl">Reviews</span>
+          <h2 class="sec-ttl">What Our Clients Say</h2>
+          <p class="sec-desc">
+            Real experiences from our community of luxury lifestyle enthusiasts.
+          </p>
+        </div>
+      </div>
+      <div class="swiper testi-swiper">
+        <div class="swiper-wrapper" id="testiWrap"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <section id="gallery">
+      <div class="sec-hdr" style="margin-bottom: 2rem">
+        <div>
+          <span class="sec-lbl" style="color: #93c5fd">Lifestyle Gallery</span>
+          <h2 class="sec-ttl" style="color: #fff">Style in the Wild</h2>
+          <p class="sec-desc" style="color: rgba(255, 255, 255, 0.4)">
+            How our community styles their LUXE pieces.
+          </p>
+        </div>
+        <a href="#" class="view-all" style="color: #60a5fa"
+          >Follow @luxestyle <i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="gal-grid">
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700&auto=format&fit=crop"
+            class="gal-img"
+            alt=""
+          />
+          <div class="gal-ov"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&auto=format&fit=crop"
+            class="gal-img"
+            alt=""
+          />
+          <div class="gal-ov"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&auto=format&fit=crop"
+            class="gal-img"
+            alt=""
+          />
+          <div class="gal-ov"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&auto=format&fit=crop"
+            class="gal-img"
+            alt=""
+          />
+          <div class="gal-ov"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="gal-item">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&auto=format&fit=crop"
+            class="gal-img"
+            alt=""
+          />
+          <div class="gal-ov"><i class="fab fa-instagram"></i></div>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div style="text-align: center; margin-bottom: 2.75rem">
+        <span class="sec-lbl">FAQ</span>
+        <h2 class="sec-ttl">Frequently Asked Questions</h2>
+        <p class="sec-desc" style="margin: 0 auto; text-align: center">
+          Everything you need to know about shopping with LUXE.
+        </p>
+      </div>
+      <div class="faq-wrap" id="faqWrap"></div>
+    </section>
+    <section id="nl">
+      <div class="nl-glow"></div>
+      <div class="nl-content">
+        <div class="nl-icon"><i class="fas fa-envelope-open-text"></i></div>
+        <h2 class="nl-ttl">Stay in the Loop</h2>
+        <p class="nl-desc">
+          Subscribe to get early access to new drops, exclusive deals, and
+          luxury lifestyle inspiration delivered to your inbox.
+        </p>
+        <div class="nl-form">
+          <input
+            type="email"
+            class="nl-input"
+            id="nlEmail"
+            placeholder="Your email address"
+          />
+          <button class="nl-btn" onclick="subNL()">Subscribe</button>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="sec-hdr" style="margin-bottom: 2.75rem">
+        <div>
+          <span class="sec-lbl">Get In Touch</span>
+          <h2 class="sec-ttl">We'd Love to Hear From You</h2>
+          <p class="sec-desc">
+            Our concierge team is available to assist you with any questions.
+          </p>
+        </div>
+      </div>
+      <div class="con-grid">
+        <div data-aos="fade-right">
+          <div class="con-item">
+            <div class="con-ico"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="con-txt">
+              <h4>Visit Our Flagship</h4>
+              <p>180 Fifth Avenue, Suite 2200<br />New York, NY 10010, USA</p>
+            </div>
+          </div>
+          <div class="con-item">
+            <div class="con-ico"><i class="fas fa-phone-alt"></i></div>
+            <div class="con-txt">
+              <h4>Call Us</h4>
+              <p>+1 (800) 589-LUXE<br />Mon–Sat, 9AM–8PM EST</p>
+            </div>
+          </div>
+          <div class="con-item">
+            <div class="con-ico"><i class="fas fa-envelope"></i></div>
+            <div class="con-txt">
+              <h4>Email Us</h4>
+              <p>hello@luxestyle.com<br />We reply within 24 hours</p>
+            </div>
+          </div>
+          <div class="con-item">
+            <div class="con-ico"><i class="fas fa-headset"></i></div>
+            <div class="con-txt">
+              <h4>Live Chat</h4>
+              <p>Available 24/7 via our<br />website chat widget</p>
+            </div>
+          </div>
+          <div class="soc-links">
+            <a href="#" class="soc-a"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <div class="con-form" data-aos="fade-left">
+          <h3
+            style="
+              font-family: &quot;Poppins&quot;, sans-serif;
+              font-weight: 700;
+              margin-bottom: 1.4rem;
+              color: var(--navy);
+            "
+          >
+            Send a Message
+          </h3>
+          <div class="form-row">
+            <div class="form-g">
+              <label class="form-lbl">First Name</label
+              ><input type="text" class="form-inp" placeholder="John" />
+            </div>
+            <div class="form-g">
+              <label class="form-lbl">Last Name</label
+              ><input type="text" class="form-inp" placeholder="Doe" />
+            </div>
+          </div>
+          <div class="form-g">
+            <label class="form-lbl">Email Address</label
+            ><input
+              type="email"
+              class="form-inp"
+              placeholder="john@email.com"
+            />
+          </div>
+          <div class="form-g">
+            <label class="form-lbl">Subject</label
+            ><select class="form-sel">
+              <option>Order Inquiry</option>
+              <option>Product Question</option>
+              <option>Returns & Exchanges</option>
+              <option>Wholesale / Business</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-g">
+            <label class="form-lbl">Message</label
+            ><textarea
+              class="form-ta"
+              placeholder="How can we help you?"
+            ></textarea>
+          </div>
+          <button class="form-sub" onclick="submitForm(this)">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="ft-grid">
+        <div class="ft-brand">
+          <a href="#" class="nav-logo">LUXE</a>
+          <p>
+            Redefining luxury lifestyle since 2012. Premium products,
+            extraordinary experiences, and timeless elegance for the modern
+            connoisseur.
+          </p>
+          <div class="soc-links">
+            <a href="#" class="soc-a"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="soc-a"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="ft-col">
+          <h4>Shop</h4>
+          <ul class="ft-links">
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Flash Sales</a></li>
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Help</h4>
+          <ul class="ft-links">
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="ft-col">
+          <h4>Company</h4>
+          <ul class="ft-links">
+            <li><a href="#">About LUXE</a></li>
+            <li><a href="#">Sustainability</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Affiliates</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-bottom">
+        <p>© 2026 LUXE Premium Lifestyle. All rights reserved.</p>
+        <div class="ft-legal">
+          <a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+          ><a href="#">Cookie Policy</a>
+        </div>
+      </div>
+    </footer>
+    <div class="cart-ov" id="cartOv" onclick="closeCart()"></div>
+    <div class="cart-panel" id="cartPanel">
+      <div class="cart-hdr">
+        <h3>
+          Shopping Bag <span id="cCount" style="color: var(--blue)">(0)</span>
+        </h3>
+        <button class="cart-cls" onclick="closeCart()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">
+          <i class="fas fa-shopping-bag"></i>
+          <p>Your bag is empty.<br />Start adding some luxury!</p>
+        </div>
+      </div>
+      <div class="cart-ft" id="cartFt" style="display: none">
+        <div class="cart-tot">
+          <span>Total</span><span id="cartTotal">$0.00</span>
+        </div>
+        <button class="chk-btn">
+          Proceed to Checkout <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="toast" id="toast">
+      <i class="fas fa-check-circle"></i><span id="toastMsg">Added!</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="scriptt.js"></script>
+  </body>
+</html>
